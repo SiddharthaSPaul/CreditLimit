@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>Eligibility Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="calculator-container">
-        <h1>Simple Calculator</h1>
+        <h1>Eligibility Calculator</h1>
         <form id="calcForm">
-            <label for="input1">Enter first number:</label>
-            <input type="number" id="input1" required>
+            <label for="totalPurchases">Total Purchases (last 12 months):</label>
+            <input type="number" id="totalPurchases" required>
 
-            <label for="input2">Enter second number:</label>
-            <input type="number" id="input2" required>
+            <label for="ccLimit">CC Limit:</label>
+            <input type="number" id="ccLimit" required>
 
-            <button type="button" onclick="calculate()">Calculate</button>
+            <label for="highestPurchase">Highest Purchase:</label>
+            <input type="number" id="highestPurchase" required>
+
+            <button type="button" onclick="calculateFinalLimit()">Calculate Final Limit</button>
         </form>
         <div class="result">
-            <h2>Result: <span id="output"></span></h2>
+            <h2>Final Limit: <span id="finalLimitOutput"></span></h2>
         </div>
     </div>
     <script src="script.js"></script>
