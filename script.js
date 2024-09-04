@@ -1,3 +1,4 @@
+
 function calculateFinalLimit() {
     // Get input values
     const totalPurchases = parseFloat(document.getElementById('totalPurchases').value);
