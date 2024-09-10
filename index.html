@@ -13,13 +13,19 @@
     <div id="loginContainer" class="login-container">
         <h2>Login</h2>
         <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" required>
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </p>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </p>
 
-            <button type="button" onclick="validateLogin()">Login</button>
+            <p>
+                <button type="button" onclick="validateLogin()">Login</button>
+            </p>
             <p id="loginError" class="error-message"></p>
         </form>
     </div>
@@ -27,24 +33,29 @@
     <!-- Main Calculator Container (Initially Hidden) -->
     <div id="calculatorContainer" class="calculator-container" style="display: none;">
         <h1>Eligibility Calculator</h1>
+        <p class="note"><b>Note: All inputs must be in the same unit. Example: all in INR lakh, all in INR, etc.</b></p>
+
         <form id="calcForm">
-            <label for="totalPurchases">Total Purchases (last 12 months):</label>
-            <input type="number" id="totalPurchases" required>
+            <p>
+                <label for="totalPurchases">Total Purchases (last 12 months):</label>
+                <input type="number" id="totalPurchases" required>
+            </p>
 
-            <br>
+            <p>
+                <label for="ccLimit">CC Limit:</label>
+                <input type="number" id="ccLimit" required>
+            </p>
 
-            <label for="ccLimit">CC Limit:</label>
-            <input type="number" id="ccLimit" required>
+            <p>
+                <label for="highestPurchase">Highest Purchase:</label>
+                <input type="number" id="highestPurchase" required>
+            </p>
 
-            <br>
-
-            <label for="highestPurchase">Highest Purchase:</label>
-            <input type="number" id="highestPurchase" required>
-
-            <br>
-
-            <button type="button" onclick="calculateExpectedLimit()">Calculate Expected Limit</button>
+            <p>
+                <button type="button" onclick="calculateExpectedLimit()">Calculate Expected Limit</button>
+            </p>
         </form>
+
         <div class="result">
             <h2>Expected Limit: <span id="finalLimitOutput">0.00</span></h2>
         </div>
