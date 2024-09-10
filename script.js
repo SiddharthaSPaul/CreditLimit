@@ -16,7 +16,7 @@ function validateLogin() {
 }
 
 // Function to calculate the final limit
-function calculateFinalLimit() {
+function calculateExpectedLimit() {
     // Get input values
     const totalPurchases = parseFloat(document.getElementById('totalPurchases').value);
     const ccLimit = parseFloat(document.getElementById('ccLimit').value);
