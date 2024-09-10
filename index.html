@@ -31,16 +31,22 @@
             <label for="totalPurchases">Total Purchases (last 12 months):</label>
             <input type="number" id="totalPurchases" required>
 
+            <br>
+
             <label for="ccLimit">CC Limit:</label>
             <input type="number" id="ccLimit" required>
+
+            <br>
 
             <label for="highestPurchase">Highest Purchase:</label>
             <input type="number" id="highestPurchase" required>
 
-            <button type="button" onclick="calculateFinalLimit()">Calculate Final Limit</button>
+            <br>
+
+            <button type="button" onclick="calculateExpectedLimit()">Calculate Expected Limit</button>
         </form>
         <div class="result">
-            <h2>Final Limit: <span id="finalLimitOutput">0.00</span></h2>
+            <h2>Expected Limit: <span id="finalLimitOutput">0.00</span></h2>
         </div>
     </div>
 
