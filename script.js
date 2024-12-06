@@ -19,6 +19,7 @@ function validateLogin() {
 function calculateExpectedLimit() {
     // Get input values
     const totalPurchases = parseFloat(document.getElementById('totalPurchases').value);
+    const creditTrancheDays = parseFloat(document.getElementById('creditTrancheDays').value);
     const ccLimit = parseFloat(document.getElementById('ccLimit').value);
 
     // Validate inputs
@@ -28,9 +29,9 @@ function calculateExpectedLimit() {
     }
 
     // Perform hidden calculations
-    const projectedPurchases = totalPurchases * 1.1; // Projected Purchases (next 12 months)
+    const projectedPurchases = totalPurchases * 0.2; // Projected Purchases (next 12 months)
     const averageProjectedPurchases = projectedPurchases / 12; // Average projected purchases
-    const eligibilityBasisPurchasesOnly = averageProjectedPurchases * 3; // Eligibility basis purchases only
+    const eligibilityBasisPurchasesOnly = averageProjectedPurchases * (creditTrancheDays/30); // Eligibility basis purchases only
     const lessCCLimit = ccLimit / 5; // Updated formula for Less CC Limit
     const finalRotationalEligibility = eligibilityBasisPurchasesOnly - lessCCLimit; // Final Rotational Eligibility
 

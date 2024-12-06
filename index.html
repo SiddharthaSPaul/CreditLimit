@@ -39,20 +39,29 @@
             <p>
                 <label for="totalPurchases">Total Purchases (last 12 months):</label>
                 <input type="number" id="totalPurchases" required>
+                <br>
+                <i><span style="font-size: smaller;">Total raw material purchased in last 12 months</span></i>
             </p>
 
             <p>
-                <label for="ccLimit">CC Limit:</label>
+                <label for="ccLimit">Total OD and CC Limit:</label>
                 <input type="number" id="ccLimit" required>
+                <br>
+                <i><span style="font-size: smaller;">Overdraft facility, existing limit from NBFC or bank, etc.</span></i>
             </p>
 
             <p>
-                <button type="button" onclick="calculateExpectedLimit()">Calculate Expected Limit</button>
+                <label for="creditTrancheDays">Required Credit Days (30, 45, 60, 90):</label>
+                <input type="number" id="creditTrancheDays" required>
+            </p>
+
+            <p>
+                <button type="button" onclick="calculateExpectedLimit()">Calculate Eligible Limit</button>
             </p>
         </form>
 
         <div class="result">
-            <h2>Expected Limit: <span id="finalLimitOutput">0.00</span></h2>
+            <h2>Eligible Limit: <span id="finalLimitOutput">0.00</span></h2>
         </div>
     </div>
 
